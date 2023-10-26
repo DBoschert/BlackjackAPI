@@ -58,6 +58,7 @@ public class PlayerController {
 	
 	@PostMapping 
 	public ResponseEntity<Player> PostPlayer(@RequestBody Player player) {
+
 	        if (player.getId() != 0) {
 	            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 	        }
